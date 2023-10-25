@@ -1,0 +1,74 @@
+.loginform{
+    width: 700px;
+    height: 500px;
+    background-color: rgb(189, 178, 178);
+    box-shadow: 0 4px 30px rgba(52, 116, 194, 0.25)!important;
+    margin-left: 340px;
+    top:20px;
+    position: relative;
+    border-radius: 15px;
+}
+.user-email>input,.user-Password>input{
+    height: 50px!important;
+    width: 400px!important;
+    border-radius: 5px;
+    left: 120px;
+    position: relative;
+   padding-left: 50px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   border:none;
+   outline:none
+}
+
+.user-email>input{
+    top:120px;
+    position: relative;
+
+}
+.user-Password>input{
+    top:150px;
+    position: relative;
+}
+
+
+.btn-input{
+    top:-130px;
+    right: 40px;
+    position: relative;
+    margin-left: 140px!important;
+    margin-top: 60px!important;
+    width: 400px!important;
+    height: 50px;
+    cursor: pointer;
+     background-color: red!important;
+     outline: none;
+     border: none;
+     color:white!important;
+     font-weight: 700!important;
+}
+
+.btn-input:hover{
+    background-color: #3285EA;
+}
+
+.user-email>svg,.user-Password>svg{
+    margin-left:135px;
+    font-size: 25px;
+    z-index: 2;
+}
+.user-email>svg{
+    position: absolute;
+    margin-top: 135px;
+}
+
+.user-Password>svg{
+    position: absolute;
+    margin-top: 165px;
+}
+
+.below-link{
+    top:200px;
+    right:-200px!important;
+    position: relative;
+
+}

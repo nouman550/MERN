@@ -1,0 +1,70 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/x-data-grid": "^6.8.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
+    "dom-to-image": "^2.6.0",
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^1.11.11",
+    "html2canvas": "^1.4.1",
+    "overlay-navbar": "^1.1.1",
+    "react": "^17.0.2",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-dom": "^17.0.2",
+    "react-dropdown": "^1.11.0",
+    "react-flippy": "^1.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.6.0",
+    "react-material-ui-carousel": "^3.1.0",
+    "react-notifications": "^1.7.4",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^7.2.9",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "reactjs-alert": "^2.2.0",
+    "reactjs-flip-card": "^2.0.2",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
+    "rsuite": "^5.23.3",
+    "template-basic": "^0.1.0",
+    "tr": "^1.1.2",
+    "web-vitals": "^1.1.2",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:4000"
+}

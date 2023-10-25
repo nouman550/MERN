@@ -1,0 +1,121 @@
+.unlock-block {
+    height: 800px;
+    top: 620px;
+    position: relative;
+    background: #FF0F7A;
+
+}
+
+.unlock-block>h1 {
+    left:250px;
+    top:40px;
+    position: absolute;
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 55px;
+    line-height: 20%;
+    letter-spacing: 0px;
+    color: #FCFE00;
+}
+.box-grid{
+    top:120px;
+    position: relative;
+}
+.silk-route{
+font-family: 'PT Sans Narrow';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+text-align: justify;
+color: white;
+left:70px;
+position: relative;
+}
+.silk-route span{
+    color: #FCFE00;
+}
+
+.down-arrow{
+    top:30px;
+    left:50px;
+    position: relative;
+}
+.up-arrow{
+    left:180px;
+    top:-60px;
+    position: relative;
+}
+.experts{
+    font-family: 'PT Sans Narrow';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+text-align: justify;
+color: #FFFFFF;
+}
+
+.unlock-block>h2{
+
+    left:100px;
+   
+    position: absolute;
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 30%;
+    letter-spacing: 0px;
+    color: #FCFE00;
+}
+.unlock-block>h3{
+    font-family: 'PT Sans Narrow';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+text-decoration-line: underline;
+color: #39FF14;
+top:70px;
+position: relative;
+cursor: pointer;
+}
+
+.company-bio {
+    height: 570px;
+    background: #39FF14 !important;
+    top: 580px;
+    position: relative;
+
+}
+
+.company-bio>h1 {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #5501EE;
+    top: 100px;
+    position: relative;
+}
+
+.company-bio>p {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    left: 100px;
+    top: 100px;
+    position: relative;
+
+    text-align: justify;
+
+    color: #5501EE;
+}

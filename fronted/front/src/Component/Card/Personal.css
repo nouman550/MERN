@@ -1,0 +1,218 @@
+.personal-div{
+    background-color: rgb(172, 192, 184)!important;
+    height:2000px;
+    margin-top:-25px
+}
+
+.personal-div>p{
+    top:30px;
+    position: relative;
+}
+.personal-background{
+    top:80px;
+    position: relative;
+}
+.check-first,.check-fifth{
+    margin-left: 80px;
+}
+.check-second,.check-sixth{
+    margin-left:30px
+}
+.check-first>img,.check-second>img,.check-third>img,.check-fourth>img,.check-fifth>img,.check-sixth>img,.check-seventh>img{
+    width:200px;
+    height:100px
+}
+.check-first>input,.check-second>input,.check-third>input,.check-fourth>input,.check-fifth>input,.check-sixth>input,.check-seventh>input{
+    top:-25px;
+    position: relative;
+    width:40px;
+    height:30px
+
+}
+
+.check-fifth,.check-seventh,.check-sixth{
+    top:30px;
+    position: relative;
+}
+
+.thumbprint-div>p,.text-plate>p,.personal-div>p{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(90, 20, 69);
+    font-weight: 700;
+}
+
+.thumb-background{
+    top:170px;
+    position: relative;
+}
+.thumbprint-div>p{
+    top:140px;
+    position: relative;
+}
+.text-plate>p{
+    top:220px;
+    position: relative;
+}
+
+.text-plate>select{
+    top:250px;
+    left:450px;
+    position: relative;
+
+}
+.first-name>input,.last-name>input,.company-name>input,.company-location>input,.company-product>input{
+    height: 50px!important;
+    width: 400px!important;
+    border-radius: 5px;
+    left: 370px;
+    position: relative;
+    padding-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:none;
+    outline:none;
+    font-size:20px!important
+}
+.first-name>input::placeholder,.last-name>input::placeholder,.company-name>input::placeholder,.company-location>input::placeholder,.company-product>input::placeholder{
+    left:20px;
+    position: relative;
+}
+.first-name>input{
+    top:330px;
+    position: relative;
+
+   
+}
+.last-name>input{
+    top:380px;
+    position: relative;
+}
+.last-name>svg,.first-name>svg{
+    left:390px;
+    position: relative;
+    font-size: 25px;
+    z-index: 2;
+}
+
+.first-name>svg{
+    position: absolute;
+    margin-top: 345px;
+}
+.last-name>svg{
+    position: absolute;
+    margin-top: 395px;
+}
+
+.user-profile-div{
+    top:400px;
+    left:450px;
+    position: relative;
+
+}
+
+
+
+.btn-input-card{
+    top:460px;
+    left: 10px;
+    position: relative;
+    margin-left: 2px!important;
+    margin-top: 60px!important;
+    width: 400px!important;
+    height: 50px;
+    cursor: pointer;
+     background-color: red!important;
+     outline: none;
+     border: none;
+     color:white!important;
+     font-weight: 700!important;
+}
+
+.btn-input-card:hover{
+    background-color: #3285EA!important;
+}
+
+.company-name>input{
+    top:430px;
+     left:370px;
+    position: relative;
+    
+}
+.company-location>input{
+top:460px;
+left:370px;
+position: relative;
+}
+.company-product>input{
+    top:490px;
+left:370px;
+position: relative;
+}
+.user-label{
+    top:530px;
+    left:400px;
+    position: relative; 
+}
+
+.company-user-profile-div{
+    top:530px;
+    left:450px;
+    position: relative;
+
+}
+
+.company-label{
+    top:580px;
+    left:-75px;
+    position: relative; 
+}
+
+.company-logo-profile-div{
+    top:580px;
+    left:-55px;
+    position: relative;
+
+}
+
+.company-btn-input-card{
+    top:620px;
+    left: 400px;
+    position: relative;
+    margin-left: 2px!important;
+    margin-top: 60px!important;
+    width: 400px!important;
+    height: 50px;
+    cursor: pointer;
+     background-color: red!important;
+     outline: none;
+     border: none;
+     color:white!important;
+     font-weight: 700!important;
+
+}
+
+.company-btn-input-card:hover{
+    background-color: #3285EA!important;
+}
+
+
+.company-name>svg,.company-location>svg,.company-product>svg{
+    left:390px;
+    position: relative;
+    font-size: 25px;
+    z-index: 2;
+}
+
+.company-name>svg{
+    position: absolute;
+    margin-top: 445px;
+}
+.company-location>svg{
+    position: absolute;
+    margin-top: 475px;
+}
+
+.company-product>svg{
+    position: absolute;
+    margin-top: 505px;
+}

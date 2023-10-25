@@ -1,0 +1,98 @@
+.design-page{
+    height:1000px;
+    background-color: azure;
+    margin-top:-15px
+}
+.design-card>h1{
+    top:40px;
+    position: relative;
+    text-align: center;
+    font-weight: bold!important;
+    font-size:26px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+.card-part1{
+    background-color: rgb(235, 210, 210);
+    width:900px;
+    height:900px;
+     margin-left: 200px;
+     margin-top:80px;
+     border-radius: 25px;
+    
+     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.34);
+    z-index: 3;
+}
+.complete-card
+{
+    height: 600px;
+    width:500px;
+    animation-delay: -1500ms;
+
+}
+.card-back-image{
+  top:50px;
+  position: relative;
+    margin-left: 250px;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 5px 8px 8px 5px rgb(101, 104, 104)!important;
+    border: 5px solid white;
+    cursor: grab;
+}
+.card-plate{
+    margin-left: 250px;
+    border-radius: 10px 10px 25px 25px;
+    width:69%;
+    height:170px;
+    top:20px;
+    position: relative;
+    box-shadow: 5px 5px 5px 5px rgb(101, 104, 104)!important;
+    cursor: grab;
+   
+    user-select: none;
+}
+.card-plate>p{
+    color:black;
+    font-size: 25px;
+    top:10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.profile-image{
+
+    border-radius: 50%;
+    border: solid 10px gold;
+    width:170px;
+    height:170px;
+    top:110px;
+    left:70px;
+    position: relative;
+    box-shadow: 10px 5px 10px rgb(150, 157, 160)!important;
+    background: -webkit-radial-gradient(top left, rgba(0, 0, 0, 0.5), #000000);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    z-index: 99;
+
+}
+.thumb-print-pic{
+ 
+   
+    top:-10px;
+    left:100px;
+    position: absolute;
+    width:140px;
+    height:80px;
+
+    border-radius: 50% 50% 0% 0%;
+
+}
+
+
+@keyframes complete-card {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

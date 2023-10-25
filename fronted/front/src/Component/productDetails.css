@@ -1,0 +1,33 @@
+.details{
+    text-align: right;
+    font-size: 35px;
+    font-weight: 700!important;
+    color:red;
+   
+}
+.product-box{
+    width: 100%;
+    display: flex;
+    margin-top: -20px;
+}
+.product-box>div{
+    width: 50%;
+}
+.prod-picture{
+    border-radius: 20%;
+    margin-left: 190px;
+    height: 350px;
+    width: 300px;
+}
+.describe{
+    margin-top: 50px;
+}
+.picture-box{
+    background-color: rgb(41, 40, 39);
+    color:white;
+  
+}
+
+.price,.cate{
+    margin-left:200px;
+}

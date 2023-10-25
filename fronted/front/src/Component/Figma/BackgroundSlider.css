@@ -1,0 +1,127 @@
+.countiner-style{
+    height:100%;
+    position: absolute;
+    width:100%;
+    top:-5px;
+}
+.description>div>h1{
+    text-align: center;
+    color:white;
+    font-size: 46px;
+    font-weight: bolder;
+
+}
+.description>div>p{
+    text-align: center;
+    color:white;
+    font-size: 22px;
+
+}
+
+.caraousel-boult{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.caraousel-boult span{
+    width:70px;
+    height: 16px;
+    box-sizing: border-box;
+    color:white;
+    margin-left:25px;
+   top:100px;
+   position: relative;
+    cursor: pointer;
+    border: 2px solid #39FF14;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.caraousel-boult span:hover{
+    background: #39FF14;
+}
+
+.arrow-right,.arrow-left{
+    cursor: pointer;
+    top:100px;
+    position: relative;
+}
+.arrow-left{
+    margin-right: 230px;
+}
+.arrow-right{
+    margin-left:230px
+}
+
+.slide1-text{
+    font-family: 'Anton';
+font-style: normal;
+font-weight: bolder;
+font-size: 60px;
+line-height: 120%;
+text-transform: capitalize;
+color: #FFFFFF;
+text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.56);
+left: 130px;
+top:60px;
+position: relative;
+;
+}
+.slide2-text{
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 90%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.56);
+    left: 830px;
+    top:30px;
+    position: relative; 
+}
+.slide2-text span{
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 90%;
+    text-transform: capitalize;
+    color: #FF0F7A;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.56);
+    right:120px;
+    position: relative;
+}
+.slide2-text span img{
+    width:140px;
+    height: 50px;
+    right:30px;
+    position: relative;
+}
+.slide3-text{
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 90%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.56);
+    text-align: center;
+  margin-top:200px
+}
+.slide4-text{
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.56);
+    left:130px;
+    top:20px;
+    position: relative;
+
+}

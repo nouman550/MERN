@@ -1,0 +1,31 @@
+.select-card{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(90, 20, 69);
+    font-weight: 700;
+    top:80px;
+    position: relative;
+
+}
+
+.card-block{
+    background-color: rgb(172, 192, 184)!important;
+    height:300px;
+    margin-top:-24px
+}
+.card-block>div{
+    top:120px;
+    text-align: center;
+    position: relative;
+}
+.pers-btn,.comp-btn,.both-btn{
+    background-color: black!important;
+    width: 180px;
+    height:70px;
+    margin-left: 15px!important;
+    border-radius: 5px;
+    font-weight: 600!important;
+}
+.pers-btn:hover,.comp-btn:hover,.both-btn:hover{
+    background-color: beige!important;
+}
