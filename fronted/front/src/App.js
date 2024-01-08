@@ -19,9 +19,10 @@ import CardStyle from "./Component/Card/CardStyle";
 import DesignedCard from "./Component/Card/DesignedCard";
 import FirstPage from "./Component/Figma/FirstPage";
 import CvUploadForm from "./Component/CvUploadForm";
-import TestPage from "./Component/test_";
-import { Sidebar } from "react-pro-sidebar";
-import Sidebars from "./Component/Sidebar";
+import Dashboard from "./Component/Dashboard";
+import UpdateUserByAdmin from "./Component/UpdateUserByAdmin";
+import FileReac from "./Component/Card/FileReac";
+import AllProducts from "./Component/Admin/AllProducts";
 
 function App() {
 
@@ -44,8 +45,10 @@ const {isAuthenticated,user}=useSelector(state=>state.user)
       <Routes> 
       
         <Route exact path="/about/contact" element={<Home/>} ></Route>
-        {isAuthenticated&&user.role==='admin' &&  <Route exact path="/Dashboard" element={<Sidebars/>} ></Route> }
+        {isAuthenticated&&user.role==='admin' &&  <Route exact path="/Dashboard" element={<Dashboard/>} ></Route> }
         {isAuthenticated&&user.role==='admin' &&  <Route exact path="/admin/users" element={<ShowUsers/>} ></Route> }
+        {isAuthenticated&&user.role==='admin' &&  <Route exact path="/admin/products" element={<AllProducts/>} ></Route> }
+        {isAuthenticated&&user.role==='admin' &&  <Route exact path="/admin/update/:id" element={<UpdateUserByAdmin/>} ></Route> }
         <Route exact path="/product/:id" element={<ProductDetails/>} ></Route>
         <Route exact path="/login" element={ <Login/>} ></Route>
         <Route exact path="/account" element={isAuthenticated && <Profile/>} ></Route>
@@ -55,7 +58,7 @@ const {isAuthenticated,user}=useSelector(state=>state.user)
         <Route exact path="/printing" element={ <DesignedCard/>} ></Route>
         <Route exact path="/figma" element={ <FirstPage/>} ></Route>
         <Route exact path="/career" element={ <CvUploadForm/>} ></Route>
-        <Route exact path="/test" element={ <TestPage/>} ></Route>
+        <Route exact path="/files/new" element={ <FileReac/>} ></Route>
         
       </Routes>
       

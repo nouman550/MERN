@@ -8,6 +8,9 @@ import {ALL_PRODUCT_FAIL,
     CV_REQUEST,
     CV_SUCCESS,
     CV_FAIL,
+    DELETE_PRODUCT_FAIL,
+    DELETE_PRODUCT_REQUEST,
+    DELETE_PRODUCT_SUCCESS,
     CLEAR_ERROS
 } 
 from "../constants/productConstant";
@@ -102,3 +105,37 @@ export const submitCv=(name,email,description,cgpa,experience,university,mobile,
      }
 
   }
+
+
+
+  //DELETE A PRODUCT
+
+  export const deleteProduct=(id)=>async (dispatch)=>{
+    
+    try {
+
+        dispatch({
+            type:DELETE_PRODUCT_REQUEST
+        })
+
+       const {data}=await axios.delete(`/api/v1/admin/products/${id}`)
+        
+     
+
+        dispatch({
+            type:DELETE_PRODUCT_SUCCESS,
+            payload:data
+        })
+        
+    } catch (error) {
+        dispatch({
+            type:DELETE_PRODUCT_FAIL,
+            payload:error.response.data.message
+        })
+    }
+}
+
+
+
+//it will clear errors 
+

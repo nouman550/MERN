@@ -126,3 +126,4 @@ export const newCvReducers = (state = { cv: {} }, action) => {
             return state
     }
 }
+

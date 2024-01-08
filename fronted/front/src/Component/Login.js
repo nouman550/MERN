@@ -48,7 +48,7 @@ const SignUp = () => {
         if (error) {
 
             if(error.length>=200){
-                alert.error("failure")
+                ///alert.error("failure")
             }
             else{
 

@@ -15,14 +15,13 @@ conectDatabase();
 const server=app.listen(4000,()=>{
     console.log('server is fine and perfect'+4000)
 })
-
-/*cloudinary.config({
+/*
+cloudinary.config({
     cloud_name:process.env.CLOUDINARY_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret:process.env.CLOUDINARY_SECRET_KEY
 })
 */
-
 
 //promise rejection
 

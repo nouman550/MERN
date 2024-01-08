@@ -9,20 +9,28 @@ import { logoutUser } from "../actions/userAction";
 import { useAlert } from 'react-alert'
 import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
+import store from "../Store";
+import { loadUser } from "../actions/userAction";
 
 const UserOptions=({user})=>{
 
     const alert=useAlert();
     const dispatch=useDispatch();
-     const navigate=useNavigate()
+     const navigate=useNavigate();
 
    function removeUser(){
    
-      dispatch(logoutUser()).then(() => {
-       window.location.href="/login"
-      });
-    
-      alert.success("logout Successfully")
+    dispatch(logoutUser())
+    .then(() => {
+      alert.success("Logout Successful");
+      store.dispatch(loadUser());
+      navigate("/login");
+    })
+    .catch((error) => {
+      console.error("Logout failed:", error);
+      // Handle the error, e.g., show an error message to the user
+    });
+  
      
    }
 
@@ -30,14 +38,23 @@ const UserOptions=({user})=>{
      navigate("/account")
     }
 
+    const handleSave = () => {
+      navigate("/save");
+  };
+
+  const handleShare = () => {
+      navigate("/share");
+  };
+
 
   const actions = [
   
-    { icon: <SaveIcon />, name: 'Save' },
+    { icon: <SaveIcon />, name: 'Save',  fun:handleSave },
     { icon: <ExitToAppIcon />, name: 'LogOut' ,fun:removeUser},
-    { icon: <ShareIcon />, name: 'Share' },
+    { icon: <ShareIcon />, name: 'Share', fun:handleShare  },
   ];
-  
+
+ 
 
    return(
    <Fragment>

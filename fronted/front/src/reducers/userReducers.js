@@ -16,9 +16,11 @@ import {
     ADMIN_USERS_REQUEST,
     ADMIN_USERS_SUCCESS,
     ADMIN_USERS_FAIL,
-    DELETE_USER_REQUEST,
     DELETE_USER_FAIL,
     DELETE_USER_SUCCESS,
+    SINGLE_USER_REQUEST,
+    SINGLE_USER_SUCCESS,
+    SINGLE_USER_FAIL,
     CLEAR_ERRORS
 }
     from "../constants/userConsants"
@@ -118,6 +120,7 @@ export const logoutUserReducers = (state = { user: {} }, action) => {
     switch (action.type) {
 
         case LOGOUT_USER_SUCCESS:
+        
 
             return {
 
@@ -248,6 +251,84 @@ export const adminUserReducers = (state = { users:[] }, action) => {
                 error: null
             }
 
+        default:
+            return state
+    }
+}
+
+
+
+//delete a user by admin
+
+export const deleteUserByAdmin = (state = { user: {} }, action) => {
+
+    switch (action.type) {
+
+        case DELETE_USER_SUCCESS:
+        
+
+            return {
+
+                loading: false,
+                user: {},
+            }
+        case DELETE_USER_FAIL:
+
+            return {
+                ...state,
+                loading: false,
+                error: action.payload,
+
+
+            }
+
+
+
+        case CLEAR_ERRORS:
+
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+}
+
+
+
+
+export const userDetailsReducers=(state={user:{}},action)=>{
+
+    switch (action.type) {
+        case SINGLE_USER_REQUEST:
+           
+        return{
+            loading:true,
+           ...state
+        }
+        case SINGLE_USER_SUCCESS:
+           
+            return{
+                loading:false,
+                user:action.payload.user
+                
+            }
+            case SINGLE_USER_FAIL:
+           
+                return{
+                    loading:false,
+                    error:action.payload
+                }
+                                   
+                case CLEAR_ERRORS:
+           
+                return{
+                    ...state,
+                    error:null
+                }
+                       
         default:
             return state
     }

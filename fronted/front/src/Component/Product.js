@@ -11,9 +11,9 @@ const Product=({product})=>{
       
         
         <div className="product-detail">
-        <p>{product.name}</p> 
-         <p>price: {product.price}</p> 
-         <h1>Stock: {product.stock}</h1>
+        <p>Item  : {product.name}</p> 
+        <p>price : {product.price} RS</p> 
+        <h1>Stock: {product.stock}</h1>
         </div>
        
         

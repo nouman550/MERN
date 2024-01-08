@@ -1,0 +1,96 @@
+.user-block{
+    background-image: url("../Component/pictures/back.jpg")!important;
+    background-repeat: no-repeat!important;
+    background-size: cover;
+    margin-top:-15px;
+    height:550px
+
+}
+.updateUserform{
+    width: 700px!important;
+    height: 500px;
+    background-color: rgb(189, 178, 178);
+    box-shadow: 0 4px 30px rgba(52, 116, 194, 0.25)!important;
+    margin-left: 330px;
+    top:30px!important;
+    position: relative;
+    border-radius: 15px;
+ }
+ .username>input,.loginEmail>input,.loginPassword>select{
+    height: 50px!important;
+    width: 400px!important;
+    border-radius: 5px;
+    left: 120px;
+    position: relative;
+    padding-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:none;
+    outline:none;
+    font-size:20px!important
+   
+ }
+ .username>input{
+    top:100px;
+    position: relative;
+
+   
+}
+.loginEmail>input{
+    top:140px;
+    position: relative;
+  
+}
+
+.username>input::placeholder,.loginEmail>input::placeholder,.loginPassword>select::placeholder{
+    left:20px;
+    position: relative;
+}
+.loginPassword>select{
+    top:180px;
+    position: relative;
+}
+
+ .btn-input{
+    top:180px;
+    left: 10px;
+    position: relative;
+    margin-left: 140px!important;
+    margin-top: 60px!important;
+    width: 400px!important;
+    height: 50px;
+    cursor: pointer;
+     background-color: red!important;
+     outline: none;
+     border: none;
+     color:white!important;
+     font-weight: 700!important;
+ }
+ 
+ .btn-input:hover{
+     background-color: #3285EA!important;
+ }
+
+
+ .loginPassword>svg,.username>svg,.loginEmail>svg{
+    margin-left:135px;
+    font-size: 25px;
+    z-index: 2;
+}
+.loginPassword>svg{
+    position: absolute;
+    margin-top: 195px;
+}
+.username>svg{
+    position: absolute;
+    margin-top: 115px;
+}
+.loginEmail>svg{
+    position: absolute;
+    margin-top: 155px;
+}
+
+.below-link-register{
+    top:180px;
+    right:-200px!important;
+    position: relative;
+}

@@ -1,41 +1,72 @@
-import React, { Fragment, useEffect } from "react";
-import { showAdminUsers } from "../actions/userAction";
+import React, { Fragment, useEffect} from "react";
+import { showAdminUsers,deleteUser } from "../actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
 import LoadingSpinner from "./Loader";
 import { useAlert } from "react-alert";
-import { clearErrors } from "../actions/productAction";
 import { Link } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { DataGrid } from "@mui/x-data-grid";
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Sidebars from "./Sidebar";
+import './ShowUser.css'
 
 const ShowUsers = () => {
+
+  const Sidestyle={
+   
+    margingTop: '20px',
+    padding: '10px'
+}
   const dispatch = useDispatch();
   const alert = useAlert();
   const { users, error, loading } = useSelector((state) => state.adminUsers);
+
 
   useEffect(() => {
     dispatch(showAdminUsers());
   }, [dispatch, error, alert]);
 
+
+
+
+  function handleDeleteUser(id) {
+  
+    dispatch(deleteUser(id))
+      .then(() => {
+        // After the user is successfuslly deleted, fetch the updated user list
+        
+        dispatch(showAdminUsers());
+     
+        alert.success("User deleted successfully");
+      })
+      .catch((error) => {
+        alert.error(`Failed to delete user: ${error}`);
+      });
+  }
+  
+ 
+
   const columns = [
-    { field: "id", headerName: "User Id", minWidth: 350  },
-    { field: "name", headerName: "Name", minWidth: 250 },
-    { field: "email", headerName: "Email", minWidth: 250 },
-    { field: "role", headerName: "Role", minWidth: 150 },
+    { field: "id", headerName: "User Id", minWidth: 250 ,headerClassName: 'custom-header' },
+    { field: "name", headerName: "Name", minWidth: 150,headerClassName: 'custom-header' },
+    { field: "email", headerName: "Email", minWidth: 350,headerClassName: 'custom-header' },
+    { field: "role", headerName: "Role", minWidth: 150,headerClassName: 'custom-header' },
     {
       field: "actions",
       headerName: "Actions",
       minWidth: 200,
       sortable: false,
+      headerClassName: 'custom-header',
       renderCell: (params) => (
         <div>
-          <Link to={`/edit-user/${params.row.id}`}>
+          <Link to={`/admin/update/${params.row.id}`}>
             <EditIcon />
           </Link>
           <DeleteIcon
             style={{ cursor: "pointer" }}
-            //onClick={() => handleDeleteUser(params.row.id)}
+            onClick={() => handleDeleteUser(params.row.id)}
           />
         </div>
       ),
@@ -83,25 +114,53 @@ const ShowUsers = () => {
     
       const dataGridStyle = {
         height: "400px", // Adjust the height as needed
-        width: "100%",
-        paddingRight : "20px"
-   
+        width: "820px",
+        overflowY: "auto",
+        marginTop:'20px',
       };
 
-  return loading ? (
-    <LoadingSpinner />
-  ) : (
-    <div style={containerStyle}>
-      <div style={headerStyle}>All Users</div>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        style={dataGridStyle}
-        pageSize={10}
-        disableSelectOnClick
-      />
-    </div>
+
+      const columnsWithoutId = columns.filter(column => column.field !== 'id');
+
+  return (
+  
+  
+  <Fragment>
+  <Box sx={{ flexGrow: 1 }}>
+<Grid container spacing={1}>
+ 
+  <Grid  xs={3} sx={Sidestyle}>
+   <Sidebars />
+  </Grid>
+  <Grid  xs={9}  sx={dataGridStyle}  >
+ {
+
+loading ? (
+  <LoadingSpinner />
+) : (
+  
+  <div style={containerStyle}>
+
+  <div style={headerStyle}>All Users</div>
+  <DataGrid 
+    rows={rows}
+    columns={columnsWithoutId}
+    style={dataGridStyle}
+    pageSize={10}
+    disableSelectOnClick
+  />
+  </div>
+)
+
+ } 
+
+
+  </Grid>
+</Grid>
+</Box>
+  </Fragment>
+
   );
-};
+}
 
 export default ShowUsers;

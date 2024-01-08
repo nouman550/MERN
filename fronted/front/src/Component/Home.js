@@ -27,7 +27,7 @@ const Home=()=>{
         <Fragment>
             <Metadata title="it's fine"></Metadata>
             <div className="store">
-                <p className="ecomerce">Welcome to ecommerce
+                <p className="ecomerce">Welcome to my store
                
                 </p>
                 <h1>Featured Products</h1>

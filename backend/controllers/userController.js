@@ -12,16 +12,17 @@ exports.registerUser = Synn(async (req, res, next) => {
         width:150,
         crop:"scale"
     })
+
     */
+    
     const { name, email, password } = req.body;
 
     const user = await User.create({
         name, email, password,
         avatar: {
-           // public_id: myCloud.public_id,
-           // url: myCloud.secure_url
-           public_id:"4584754857847",
-           url:"48574857485748574"
+            public_id: 12345677,
+            url: 1234567
+         
  
         }
     })
@@ -238,7 +239,8 @@ exports.updateUserRole=Synn(async(req,res,next)=>{
     const user=await User.findByIdAndUpdate(req.params.id,newUserData,{
      new:true,runValidators:true,useFindAndModify:false});
      res.status(200).json({
-         success:true
+         success:true,
+         user
          
      })
  });

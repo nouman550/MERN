@@ -19,6 +19,9 @@ import {ALL_USER_FAIL,
     DELETE_USER_REQUEST,
     DELETE_USER_SUCCESS,
     DELETE_USER_FAIL,
+    SINGLE_USER_REQUEST,
+    SINGLE_USER_SUCCESS,
+    SINGLE_USER_FAIL
 }
      from "../constants/userConsants";
 
@@ -262,7 +265,7 @@ export const deleteUser=(id)=>async(dispatch)=>{
                 type:DELETE_USER_REQUEST
             })
          
-        await axios.get(`/admin/user/${id}`)
+        await axios.delete(`/api/v1/admin/user/${id}`)
         
      
 
@@ -284,3 +287,40 @@ export const deleteUser=(id)=>async(dispatch)=>{
  }
 
  
+//delete a single user by admin
+export const getSingleUser=(id)=>async(dispatch)=>{
+      
+       
+    try {
+
+       
+        
+
+            dispatch({
+                type:SINGLE_USER_REQUEST
+            })
+         
+       const {data} =  await axios.get(`/api/v1/admin/user/${id}`)
+        
+     
+
+        dispatch({
+            type:SINGLE_USER_SUCCESS,
+            payload:data
+        })
+        
+    } catch (error) {
+      
+         
+      
+        dispatch({
+            type:SINGLE_USER_FAIL,
+            payload:error.response.data.error
+        })
+    
+    }
+
+ }
+
+
+
